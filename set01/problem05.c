@@ -20,7 +20,7 @@ int input () {
 }
 
 int compare(int a, int b, int c){
-if(a>b)
+if(a>b)//use && operator and don't use nested if 
 {
   if (a>c){return(a);}
   else{return (c);}

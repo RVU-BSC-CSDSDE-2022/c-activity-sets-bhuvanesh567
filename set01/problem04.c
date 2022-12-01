@@ -1,5 +1,5 @@
 #include <stdio.h>
-int sum_func(int *x, int *y , int *sum);
+int sum_func(int *x, int *y , int *sum);//include input and output function
 
 int main() {
   int x, y,sum;
@@ -13,7 +13,7 @@ int main() {
 }
 
 
-sum_func(int *x, int *y, int *sum)
+ sum_func(int *x, int *y, int *sum)
 
 {
   
