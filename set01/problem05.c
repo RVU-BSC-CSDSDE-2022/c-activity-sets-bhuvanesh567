@@ -1,15 +1,15 @@
 #include <stdio.h>
-int import();
+int input();
 int compare (int a,int b,int c);
 void output (int a, int b, int c, int largest);
 
 int main(){
- int a,b,c,l;
+ int a,b,c,largest;
  a = input();
  b = input();
  c = input();
- l = compare(a,b,c);
- output(a,b,c,l);
+ largest = compare(a,b,c);
+ output(a,b,c,largest);
 }
 
 int input () {
@@ -19,22 +19,19 @@ int input () {
   return(x);
 }
 
-int compare(int a, int b, int c){
-if(a>b)//use && operator and don't use nested if 
-{
-  if (a>c){return(a);}
-  else{return (c);}
+int compare(int a, int b, int c)
+ {
+  if ((a>c)&&(a>c))
+    return a;
+  if ((b>a)&&(b>c))
+    return b;
+  if ((c>a)&&(c>b))
+    return c;
 }
-else 
-  {
-   if(b>c){return(b);}
-   else{return(c);}
-  }
-}  
 
 void output(int a,int b,int c,int largest){
   printf("the largest of %d,%d and %d is %d.",a,b,c,largest);
-}  
+}
 
   
   

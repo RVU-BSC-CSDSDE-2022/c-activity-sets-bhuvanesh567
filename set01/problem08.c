@@ -5,19 +5,20 @@ int sum_n_array(int n,int a[n]);
 void output(int n, int a[n],int sum);
 
 int main(){
-  int n,sum;
+  int n,sum=0;
   n = input_array_size();
   int a[n];
   input_array(n,a);
   sum =sum_n_array(n,a);
   output(n,a,sum);
+  return 0;
 }
 
 int input_array_size(){
-  int x;
-  printf("Enter a size\n");
-  scanf("%d",&x);
-  return(x);
+  int n;
+  printf("Enter a size of the array\n");
+  scanf("%d",&n);
+  return(n);
 }
 void input_array(int n, int a[n]){
   int i;
@@ -35,13 +36,15 @@ int sum_n_array(int n, int a[n]){
   return(sum);
 }
 
-void output(int n, int a[n],int sum){
-  printf("%d",a[0]);
-  int i;
-  for(i = 1;i<n;i++){
+void output(int n, int a[n],int sum)
+{
+  printf("The sum of");
+  for(i = 0;i<n;i++)
+  {
     printf("+%d",a[i]);
   }
-  printf(" is %d",sum);
+  printf("is %d",sum);
 }
+
 
   

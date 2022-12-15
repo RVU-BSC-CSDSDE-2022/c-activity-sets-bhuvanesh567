@@ -1,19 +1,25 @@
-#include <stdio.h>
-#include<math.h>
+#include<stdio.h>
+void input(float base, float height);
+void find_area(float base , float height, float *area);
+void output(float base, float height, float area);
+int main(){
+  float base,height;
+  input(base,height);}
 
-int calcDis(int x1, int x2, int y1, int y2)
-{   
-    return sqrt((pow((x2- x1), 2)) + (pow((y2- y1), 2)));
+void input(float base, float height){
+  
+  printf("enter base");
+  scanf("%f",&base);
+  printf("enter height");
+  scanf("%f",&height);
+  float area;
+  find_area(base,height,&area);
+  output(base,height,area);
+
 }
-int main()
-{   
-    int x1, x2, y1, y2;
-    
-    printf("Enter the First Coordinates   = ");
-    scanf("%d %d",&x1, &y1);
-
-    printf("Enter the Second Coordinates  = ");
-    scanf("%d %d",&x2, &y2);
-
-    printf("\nThe Distance = %d\n", calcDis(x1, x2, y1, y2)); 
+void find_area(float base , float height, float *area){
+  *area=0.5*base*height;
+  }
+void output(float base, float height, float area){
+  printf("The area of the traingle with %f and %f is %f",base,height,area);
 }
