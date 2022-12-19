@@ -1,42 +1,58 @@
 #include <stdio.h>
+#include <math.h>
 
 
-struct  triangle
-{
-    float base;
-    float height;
-    float area;
-}
-typedef struct triangle Triangle;
+struct camel{
+float radius;
+float height;
+float length;
+float weight;
+};
 
-int main()
-{
-   Triangle t;
-   t=input_triangle();
-   find_area(&t);
-   output(t);
-   return 0;
-}
-Triangle input_triangle();
-void find_area(Triangle *t);
-void output(Triangle t);
+typedef struct camel Camel();
 
-Triangle input_triangle()
-{
-    Triangle t;
-    printf("Enter the base\n");
-    scanf("%f", &t.base);
-    printf("Enter the height\n");
-    scanf("%f", &t.height);
-    return t;
+float main(){
+  Camel c;
+  c = input_camel();
+  find_weight(&c);
+  output(c);
+  return 0;
 }
 
-void find_area(Triangle *t)
+Camel input_camel();
+void find_weight(Camel *c);
+void output(Camel c);
+
+Camel input_camel(float *radius, float *height, float *length)
 {
-       t->area=(t->base)*(t->height)*(0.5);
+  Camel c 
+  printf("Enter the radius of the camel");
+  scanf("%f",c.radius);
+   printf("Enter the height of the camel");
+  scanf("%f",c.height);
+   printf("Enter the length of the camel");
+  scanf("%f",c.length);
+  return c;
+}
+void find_weight(Camel *c);
+ {
+    float weight;
+    float pi = 3.14;
+    
+   weight = pi *pow(radius,3) *sqrt(height * length);
+    
+    return weight;
+  }
+
+void output(Camel c)
+{
+  printf("The weight of the camel is %f",.weight);
 }
 
-void output(Triangle t)
-{
-  printf("The area is %f", t.area);
-}
+
+
+
+
+
+  
+  

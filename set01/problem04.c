@@ -1,5 +1,11 @@
 #include <stdio.h>
+
+
+
 int sum_func(int *x, int *y , int *sum);//include input and output function
+int input();
+void add(int a, int b, int *sum);
+void output(int a, int b, int sum);
 
 int main() {
   int x, y,sum;
